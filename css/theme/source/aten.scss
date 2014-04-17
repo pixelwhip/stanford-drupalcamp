@@ -150,10 +150,10 @@ $selectionBackgroundColor: $magenta;
 
 // Dark
   $mainColor: $white;
-  $headingColor: $yellow;
+  $headingColor: $white;
   $headingTextShadow: none;
   $backgroundColor: $black;
-  $linkColor: $red;
+  $linkColor: $yellow;
   $linkColorHover: lighten( $linkColor, 20% );
   $selectionBackgroundColor: $magenta;
 
@@ -162,7 +162,7 @@ $selectionBackgroundColor: $magenta;
 
   // Background generator
   @mixin bodyBackground() {
-    @include radial-gradient( rgba($backgroundColor,1), rgba(lighten($backgroundColor, 20%),1) );
+    @include radial-gradient( rgba($backgroundColor,1), rgba(lighten($backgroundColor, 10%),1) );
   }
 
   @import "../template/theme";
@@ -201,6 +201,15 @@ $selectionBackgroundColor: $magenta;
 .screenshot {
   border: 3px solid white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+//
+// Aten Logo
+//
+
+.aten-logo {
+  width: 400px;
+  margin-bottom: 2em;
 }
 
 //
@@ -306,7 +315,7 @@ $selectionBackgroundColor: $magenta;
 }
 
 .background-text {
-  position: fixed;
+  position: absolute;
   display: block;
   font-size: 20em !important;
   line-height: .66em;
@@ -319,4 +328,18 @@ $selectionBackgroundColor: $magenta;
   opacity: .1;
 }
 
+.title-left {
+  margin-left: 0;
+  width: 38%;
 }
+
+.screenshot--regions {
+  position: absolute;
+  max-height: none;
+  max-width: none;
+  height: 42em;
+  top: -8em;
+  left: 38%;
+}
+
+} // End .reveal .section wrapper
