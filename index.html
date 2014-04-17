@@ -42,322 +42,613 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+				<section id="title-slide">
+					<h1>Custom Themes</h1>
+					<h3>Without the Custom Themes</h3>
+					<p>Pushing the visual style of Stanford Site</p>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
 					</p>
 
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+						Current State: Stanford sites offers a flexible platform for getting your content online.  It's Free!!
+
+						Consequences:  No custom code :( You will have some limitations.  Your site will look like everyone elses.
+
+						Solution:  Use the tools available. Get creative.
+
+						Call to Action: Take advantage of Stanford Sites.  Don't let the idea of no custom code hold you back.  Build something beautiful.
 					</aside>
 				</section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
+				<section id="about">
+					<h1>Aten Logo</h1>
+					<h3>John Ferris</h3>
+					<p>
+						<small>Created by <a href="http://pixel-whip.com">John Ferris</a> / <a href="http://twitter.com/picxel_whip">@pixel_whip</a></small>
+					</p>
+
+					<aside class="notes">
+
+					</aside>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
+					<h1>Themes</h1>
+					<h2 class="fragment">HTML + CSS + JS</h2>
+
+					<aside class="notes">
+						The purpose of a Drupal theme is to improve upon the site's user experience.
+
+						Your SITE enables a user accomplish a certain goal--register for an event, communicate with their peers, or in most cases to access your content.
+
+						The THEME, improves upon that experience. By making the navigation clearer, the text more readible and making sure the experience is consistent with related on and offline properties.
+
+						From a technical point of view, the theme does this by modifying the default HTML, CSS and JS.
+
+						And that's what we're talking about today.
+					</aside>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+					<img src="img/stanford-logo.png" alt="Stanford Logo" class="stanford-logo">
+					<h2>Stanford Sites</h2>
+					<aside class="notes">
+						Today we're going to focus on the technical side of improving the user experience.  Ways you can manipulate the HTML + CSS + JS on the Stanford Sites platform.
+					</aside>
+				</section>
+
+				<section data-state="state--dark">
+					<img src="img/free.svg">
+
+					<aside class="notes">
+						Stanford sites offers current faculty, staff and students a free platform to get their content online. It's self service and hosted and maintained Drupal infustructure.
+					</aside>
+				</section>
+
+				<section data-state="state--red">
+					<h1><sup class="background-text">*</sup>No Outside Code</h1>
+					<h3>Permitted beyond this point</h3>
+
+					<aside class="notes">
+						As a front-end developer working with Drupal, I spend a good deal of time writing custom code to get the HTML, CSS and JS I want.  So when we were first approached with a project that where a custom user experience was a high priority and needed to launch on was going to be built on the Stanford Sites platform, I was a little skeptical about how far we culd push it.
+
+						But as it turned out, there is a lot of power and flexibility built into Stanford Sites and what limitations we did run into we're related more to functionality that would require a custom module than custom code in the theme.
+
+						In some ways this was actually freeing.  It was a little relief from analysis paralysis. It forces you to be creative with the tools you have available and think inside the box.
+
+						Let's look at those tools.
+					</aside>
 				</section>
 
 				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+					<h2>Included Modules</h2>
+					<ul class="module-list">
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/admin_menu">admin_menu</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/admin_views">admin_views</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/advanced_help">advanced_help</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/auto_nodetitle">auto_nodetitle</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/backup_migrate">backup_migrate</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/backup_migrate_files">backup_migrate_files</a></li>
+						<li><a href="http://drupal.org/project/bean" rel="nofollow">bean</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/better_exposed_filters" rel="nofollow">better exposed filters</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/better_formats" rel="nofollow">better formats</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/biblio">biblio</a></li>
+						<li>
+<a href="http://drupal.org/project/block_class">block_class</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/block_titlelink">block_titlelink </a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/bundle_copy">bundle_copy</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/calendar">calendar</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/computed_field" rel="nofollow">computed field</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/content_access">content_access</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/context">context</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/context_accordion" rel="nofollow">context accordion</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/context_list">context_list</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/context_list_active">context_list_active</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/context_respect">context_respect</a></li>
+						<li>
+<a href="http://drupal.org/project/css_injector">css_injector</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/ctools">ctools</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/custom_breadcrumbs">custom_breadcrumbs</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/date">date</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/date_ical">date_ical</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/delta" rel="nofollow">delta</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/diff" rel="nofollow">diff</a></li>
+						<li>
+<a href="http://drupal.org/project/ds">ds</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/email">email</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/entity">entity</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/entityreference">entityreference</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/features">features</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/feeds">feeds</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/feeds_tamper">feeds_tamper</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/feeds_xpathparser">feeds_xpathparser</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/field_collection">field_collection</a></li>
+						<li>
+<a href="http://drupal.org/project/field_group">field_group</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/filefield_paths">filefield_paths</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/geofield" rel="nofollow">geofield</a> (and <a href="https://drupal.org/project/geophp" rel="nofollow">geophp</a>)</li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/globalredirect">globalredirect</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/google_analytics">google_analytics</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/insert">insert</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/job_scheduler">job_scheduler</a></li>
+						<li>
+<a href="https://drupal.org/project/js_injector">js_injector</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/jw_player">jw_player</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/libraries">libraries</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/link">link</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/menu_block" rel="nofollow">menu block</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/menu_position" rel="nofollow">menu position</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/metatag">metatag</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/module_filter" rel="nofollow">module filter</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/mollom">mollom</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/nodeformcols">nodeformcols</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/node_clone">node_clone</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/openlayers" rel="nofollow">openlayers</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/path_redirect_import">path_redirect_import</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/pathauto">pathauto</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/pathologic">pathologic</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/proj4js">proj4js</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/redirect">redirect</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/relation">relation</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/rules">rules</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/services">services</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/site_verify" rel="nofollow">site verification</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/smart_trim">smart_trim</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupalfeatures.stanford.edu/project/stanford-courses">stanford_courses</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupalfeatures.stanford.edu/project/stanford-events-importer">stanford_events_importer</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupalfeatures.stanford.edu/project/stanford-sites-helper">stanford_sites_helper</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupalfeatures/project/stanford-web-video">stanford_video</a></li>
+					  	<li class="fragment shrink" data-fragment-index="2">
+<a href="https://github.com/su-sws/stanford_video" rel="nofollow">stanford web video</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://github.com/su-sws/stanford_wysiwyg" rel="nofollow">stanford_wysiwyg</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/strongarm">strongarm</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/taxonomy_manager">taxonomy_manager</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/token">token</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/transliteration" rel="nofollow">transliteration</a></li>
+						<li>
+<a href="http://drupal.org/project/views">views</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/views_bulk_operations">views_bulk_operations</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/views_data_export">views_data_export</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/views_field_view">views_field_view</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/views_slideshow">views_slideshow</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://itservices.stanford.edu/service/web/stanfordsites/webauthfeatures">webauth v.3</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/webform" rel="nofollow">webform</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/workbench" rel="nofollow">workbench</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/workbench_access" rel="nofollow">workbench access</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/workbench_moderation" rel="nofollow">workbench moderation</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/wysiwyg">wysiwyg</a> [with CKEditor JS libraries]</li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/wysiwyg_filter" rel="nofollow">wysiwyg filter</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/xmlsitemap">xmlsitemap</a></li>
 					</ul>
+					<aside class="notes">
+						You actually have a lot of useful tools at your disposal.
+
+					</aside>
+				</section>
+
+				<section data-state="state--yellow">
+					<h1>HTML<br/>&lt;/&gt;</h1>
+
+					<aside class="notes">
+						Sense good markup is the foundation of any web project, let's start there.
+					</aside>
+				</section>
+
+				<section data-state="state--yellow" data-slide-on-change="layoutLoad" >
+					<h2>The Drupal Page</h2>
+					<div id="layout-node-page" class="fragment fade-in" src=""></div>
+					<ul class="layout-list">
+						<li class="fragment"><h3>Layout</h3></li>
+						<li class="fragment" data-fragment-on-show="layoutShowBlocks" data-fragment-on-hide="layoutHideBlocks"><h3>Blocks</h3></li>
+						<li class="fragment" data-fragment-on-show="layoutShowViews" data-fragment-on-hide="layoutHideViews"><h3>Views</h3></li>
+						<li class="fragment" data-fragment-on-show="layoutShowNodes" data-fragment-on-hide="layoutHideNodes"><h3>Nodes</h3></li>
+					</ul>
+					<aside class="notes">
+						You actually have a lot of useful tools at your disposal.
+						<ul>
+							<li>Nodes</li>
+							<li>Views</li>
+							<li>Blocks</li>
+							<li>Layout</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-state="state--yellow" >
+					<h1 class="layout-title">Nodes</h1>
+					<img class="layout-img" src="img/layout-node.svg">
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+
+
+				<section data-state="state--dark" >
+					<h1>Display Suite</h1>
+
+					<aside class="notes">
+						Display suite is all about giving you control over the markup of entities.
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot" class="slide-canvas">
+					<h2>View Modes</h2>
+					<img class="screenshot view-mode--full" src="img/ss-node-mode-full.png">
+					<img class="screenshot view-mode--teaser" src="img/ss-node-mode-teaser.png">
+					<img class="screenshot view-mode--listing" src="img/ss-node-mode-listing.png">
+
+					<aside class="notes">
+						View modes allow you to display content in different ways.  We typically think of Full and Teaser.  Display suite allows you to expand on those with custom view modes.
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot">
+					<img class="screenshot" src="img/ss-ds-view-modes.png">
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot">
+					<h2>DS Layouts</h2>
+					<img class="screenshot" src="img/ss-ds-layout.png">
+					<aside class="notes">
+						Display Suite has built in layouts.  These aren't responsive.
+					</aside>
 				</section>
 
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+					<h2>Psuedo Layouts <small>with Field Groups</small></h2>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
+					<img class="screenshot" src="img/ss-ds-field-groups.png">
+					<aside class="notes">
+						In a custom code world, you can create a custom DS layout.  In Stanford Sites land, you can fake them with field groups.
+					</aside>
 				</section>
 
 				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
+
+					<img class="screenshot" src="img/ss-ds-field-groups-example.png">
+					<aside class="notes">
+					</aside>
 				</section>
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
+				<section data-state="state--yellow" >
+					<h1 class="layout-title">Views</h1>
+					<img class="layout-img" src="img/layout-views.svg">
+
+					<aside class="notes">
+						Views allow you to list content.
+					</aside>
 				</section>
 
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-views-example.png">
+					<aside class="notes">
+
+					</aside>
 				</section>
 
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-views.png">
+					<aside class="notes">
+
+					</aside>
 				</section>
 
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-views-style-settings.png">
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-views-field-settings.png">
+					<aside class="notes">
+
+					</aside>
 				</section>
 
 				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
+	<h2>Yay...clean list markup!</h2>
+<pre><code><div class="list-group">
+  <ul class="list--ruled--inner list--ruled--condensed">
+    <li class="list-item"><!-- Node Markup --></li>
+    <li class="list-item"><!-- Node Markup --></li>
+    <li class="list-item"><!-- Node Markup --></li>
+  </ul>
+</div>
+</code></pre>
+
+					<aside class="notes">
+						List class, Row class and Wrapper class
+					</aside>
+				</section>
+
+				<section data-state="state--yellow" >
+					<h1 class="layout-title">Blocks</h1>
+					<img class="layout-img" src="img/layout-blocks.svg">
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+					<h1>Block Class</h1>
+					<aside class="notes">
+						Allows you to add a class to any block or bean.  Sloppy CSS b-gone.  By sharing classes makes your CSS more maintainable.
+					</aside>
+				</section>
 
-    var nodes = document.querySelectorAll( selector );
+				<section>
+					<h1>B.E.A.N.</h1>
+					<h3 class="acronym"><strong>B</strong>locks <strong>E</strong>ntities <strong>A</strong>ren't <strong>N</strong>odes</h3>
+					<p><small><a href="https://drupal.org/project/bean">Link</a></small></p>
+					<aside class="notes">
+						Block entities.  Which means they are fieldable, and you can create custom view modes for them.  This module does it give you direct control per say of blocks, but it does allow you to leverage the same Display Suite interface for blocks as you use for nodes.
+					</aside>
+				</section>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-bean-manage-fields.png">
+					<aside class="notes">
+						Beans are entities that behave like nodes in terms of being fieldable and having different content types. But also behave like blocks in terms of their placement.
+					</aside>
+				</section>
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-bean-manage-display.png">
+					<aside class="notes">
+						What makes these handy in terms of theming is they can also have view modes.  Those view modes can have their markup tweaked with display suite--just like nodes.
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-viewmodes.gif">
+					<aside class="notes">
+						What makes these handy in terms of theming is they can also have view modes.  Those view modes can have their markup tweaked with display suite--just like nodes.
+					</aside>
+				</section>
+
+				<section data-state="state--yellow" >
+					<h1 class="layout-title">Layout</h1>
+					<img class="layout-img" src="img/layout.svg">
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h2>Open Framework</h2>
+
+					<aside class="notes">
+						This is what theming is all about.
+					</aside>
+				</section>
+
+				<section>
+					<img class="screenshot screenshot--regions" src="img/ss-regions.png" alt="Regions Screenshot">
+					<h2>Regions</h2>
+					<aside class="notes">
+						Views allow you to list content.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Breakpoints</h2>
+					<ul>
+						<li>max-width: 480px</li>
+						<li>max-width: 767px</li>
+						<li>min-width: 786px - max-width:979</li>
+						<li>Defualt</li>
+						<li>min-width: 1200px</li>
+					</ul>
+					<aside class="notes">
+						Design to these breakpoints
+					</aside>
+				</section>
+
+				<section>
+					<h2>Bootstrap Grids</h2>
+					<code>.span#</code>
+					<aside class="notes">
+						Used for laying out blocks
+					</aside>
+				</section>
+
+				<section data-state="state--yellow">
+					<h1>CSS<br/>{ }</h1>
+
+					<aside class="notes">
+						Sense good markup is the foundation of any web project, let's start there.
+					</aside>
+				</section>
+
+				<section>
+					<h1>CSS Injector</h1>
+
+					<aside class="notes">
+						This is what theming is all about.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Importing Fonts</h1>
+					<pre><code data-trim>@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic);
+</code></pre>
+
+					<aside class="notes">
+						Allows you to write in the environment you want.  Separates components.  You can use Sass. Which aids in responsive and image handling.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Chrome Dev Tools</h1>
+
+					<aside class="notes">
+						Allows you to work on the live site. Quick. Editor is pretty good.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Style Guide</h1>
+
+					<aside class="notes">
+						Allows you to write in the environment you want.  Separates components.  You can use Sass. Which aids in responsive and image handling.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Sass + Compass</h1>
+
+					<aside class="notes">
+						Allows you to write in the environment you want.  Separates components.  You can use Sass. Which aids in responsive and image handling.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Inlining Images</h1>
+					<code>menu.scss</code>
+					<pre><code>
+.menu {
+  background: inline-image('open.png') no-repeat;
 }
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+</code></pre>
+<!-- Compiles to... -->
+					<code>menu.css</code>
+<pre><code>
+.menu {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+lpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAxNC0wMi0xMVQxMzozOTozNS0wNzowMCIgeG1wOk1vZGlmeURhdGU9IjIwMTQtMDItMjVUMjM6NDg6NDUtMDc6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMTQtMDItMjVUMjM6NDg6NDUtMDc6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjgyNThERENBOTY5QjExRTM5MDA2RDRGODkwMkE0RTNCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjgyNThERENCOTY5QjExRTM5MDA2RDRGODkwMkE0RTNCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODI1OEREQzg5NjlCMTFFMzkwMDZENEY4OTAyQTRFM0IiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODI1OEREQzk5NjlCMTFFMzkwMDZENEY4OTAyQTRFM0IiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6/KDptAAAAe0lEQVR42mL8//8/A7UBEwMNwPAzVBCIZ0JpwgAUUQSwIBCf+Q8BZ6B8vHpIMXAmsQYTa2AaVCyNGINJMZCBWIOxGagExO+g2BjJkplIhhgjqVEixlCQxt1oBmKLKGOoOsHRiCIrotAxxRHFgMdgrBHFOFqeDg1DAQIMALrF5tC9DUaUAAAAAElFTkSuQmCC') no-repeat;
+}
+
+</code></pre>
+					<aside class="notes">
+						Allows you to write in the environment you want.  Separates components.  You can use Sass. Which aids in responsive and image handling.
+					</aside>
+				</section>
+
+
+
+				<section data-state="state--yellow">
+					<h1>js<br/>( )</h1>
+
+					<aside class="notes">
+						Sense good markup is the foundation of any web project, let's start there.
+					</aside>
 				</section>
 
 				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
+					<h1>JS Injector</h1>
+
+					<aside class="notes">
+						Didn't use it.
+					</aside>
 				</section>
 
 				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
+					<h1>Drupal -> HTML -> CSS -> Drupal</h1>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
+					<aside class="notes">
+						Didn't use it.
+					</aside>
 				</section>
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
+				<section data-state="state--dark">
+					<img src="img/build-something.png" alt="build something beautiful">
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
+					<aside class="notes">
+						Build something beautiful.
+					</aside>
 				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
-
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
-
 			</div>
 
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
+		<script src="lib/js/snap.svg-min.js"></script>
 		<script src="js/reveal.min.js"></script>
 
 		<script>
@@ -370,8 +661,8 @@ function linkify( selector ) {
 				history: true,
 				center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				theme: 'aten', // available themes are in /css/theme
+				transition: 'fade' || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
@@ -389,6 +680,7 @@ function linkify( selector ) {
 			});
 
 		</script>
+		<script src="js/deck.js"></script>
 
 	</body>
 </html>

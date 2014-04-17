@@ -48,9 +48,19 @@ module.exports = function(grunt) {
 					'css/theme/sky.css': 'css/theme/source/sky.scss',
 					'css/theme/moon.css': 'css/theme/source/moon.scss',
 					'css/theme/solarized.css': 'css/theme/source/solarized.scss',
-					'css/theme/blood.css': 'css/theme/source/blood.scss'
+					'css/theme/blood.css': 'css/theme/source/blood.scss',
+					'css/theme/aten.css': 'css/theme/source/aten.scss'
 				}
 			}
+		},
+
+		autoprefixer: {
+			options: {
+				// Task-specific options go here.
+			},
+			css: {
+				src: 'css/theme/*.css' // globbing is also possible here
+			},
 		},
 
 		jshint: {
@@ -97,19 +107,30 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
+			options: {
+					livereload: true,
+			},
 			main: {
-				files: [ 'Gruntfile.js', 'js/reveal.js', 'css/reveal.css' ],
+				files: [
+					'Gruntfile.js',
+					'js/reveal.js',
+					'css/reveal.css'
+				],
 				tasks: 'default'
 			},
 			theme: {
 				files: [ 'css/theme/source/*.scss', 'css/theme/template/*.scss' ],
-				tasks: 'themes'
+				tasks: 'themes',
+			},
+			dev: {
+				files: [ '*.html', 'js/deck.js'],
+				tasks: '',
 			}
 		}
-
 	});
 
 	// Dependencies
+	grunt.loadNpmTasks( 'grunt-autoprefixer' );
 	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
@@ -123,7 +144,7 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'default', [ 'jshint', 'cssmin', 'uglify', 'qunit' ] );
 
 	// Theme task
-	grunt.registerTask( 'themes', [ 'sass' ] );
+	grunt.registerTask( 'themes', [ 'sass', 'autoprefixer' ] );
 
 	// Package presentation to archive
 	grunt.registerTask( 'package', [ 'default', 'zip' ] );
