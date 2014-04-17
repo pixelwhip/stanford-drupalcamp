@@ -371,9 +371,9 @@ body {
    *********************************************/ }
   .state--dark body {
     background: #222222;
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555555), color-stop(100%, #222222));
-    background: -webkit-radial-gradient(center, circle cover, #555555 0%, #222222 100%);
-    background: radial-gradient(center, circle cover, #555555 0%, #222222 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #3c3c3c), color-stop(100%, #222222));
+    background: -webkit-radial-gradient(center, circle cover, #3c3c3c 0%, #222222 100%);
+    background: radial-gradient(center, circle cover, #3c3c3c 0%, #222222 100%);
     background-color: #222222; }
   .state--dark .reveal {
     font-family: "Lato", sans-serif;
@@ -396,7 +396,7 @@ body {
   .state--dark .reveal h5,
   .state--dark .reveal h6 {
     margin: 0 0 20px 0;
-    color: #fcc318;
+    color: #f8f8f8;
     font-family: "League Gothic", Impact, sans-serif;
     line-height: 0.9em;
     letter-spacing: 0.02em;
@@ -407,49 +407,49 @@ body {
   .state--dark .reveal h1 {
     text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
   .state--dark .reveal a:not(.image) {
-    color: #ca0914;
+    color: #fcc318;
     text-decoration: none;
     -webkit-transition: color .15s ease;
     transition: color .15s ease; }
   .state--dark .reveal a:not(.image):hover {
-    color: #f7424d;
+    color: #fddd7d;
     text-shadow: none;
     border: none; }
   .state--dark .reveal .roll span:after {
     color: #fff;
-    background: #81060d; }
+    background: #c59403; }
   .state--dark .reveal section img {
     margin: 15px 0px;
     -webkit-transition: all .2s linear;
     transition: all .2s linear; }
   .state--dark .reveal .controls div.navigate-left,
   .state--dark .reveal .controls div.navigate-left.enabled {
-    border-right-color: #ca0914; }
+    border-right-color: #fcc318; }
   .state--dark .reveal .controls div.navigate-right,
   .state--dark .reveal .controls div.navigate-right.enabled {
-    border-left-color: #ca0914; }
+    border-left-color: #fcc318; }
   .state--dark .reveal .controls div.navigate-up,
   .state--dark .reveal .controls div.navigate-up.enabled {
-    border-bottom-color: #ca0914; }
+    border-bottom-color: #fcc318; }
   .state--dark .reveal .controls div.navigate-down,
   .state--dark .reveal .controls div.navigate-down.enabled {
-    border-top-color: #ca0914; }
+    border-top-color: #fcc318; }
   .state--dark .reveal .controls div.navigate-left.enabled:hover {
-    border-right-color: #f7424d; }
+    border-right-color: #fddd7d; }
   .state--dark .reveal .controls div.navigate-right.enabled:hover {
-    border-left-color: #f7424d; }
+    border-left-color: #fddd7d; }
   .state--dark .reveal .controls div.navigate-up.enabled:hover {
-    border-bottom-color: #f7424d; }
+    border-bottom-color: #fddd7d; }
   .state--dark .reveal .controls div.navigate-down.enabled:hover {
-    border-top-color: #f7424d; }
+    border-top-color: #fddd7d; }
   .state--dark .reveal .progress {
     background: rgba(0, 0, 0, 0.2); }
   .state--dark .reveal .progress span {
-    background: #ca0914;
+    background: #fcc318;
     -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
     transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
   .state--dark .reveal .slide-number {
-    color: #ca0914; }
+    color: #fcc318; }
 
 .reveal .slide-canvas {
   height: 95%; }
@@ -474,6 +474,9 @@ body {
   border: 3px solid white;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+.reveal section .aten-logo {
+  width: 400px;
+  margin-bottom: 2em; }
 .reveal section .stanford-logo {
   width: 240px;
   margin-bottom: .5em;
@@ -535,7 +538,7 @@ body {
   font-weight: inherit;
   color: #68050a; }
 .reveal section .background-text {
-  position: fixed;
+  position: absolute;
   display: block;
   font-size: 20em !important;
   line-height: .66em;
@@ -546,3 +549,13 @@ body {
   margin: auto;
   vertical-align: bottom;
   opacity: .1; }
+.reveal section .title-left {
+  margin-left: 0;
+  width: 38%; }
+.reveal section .screenshot--regions {
+  position: absolute;
+  max-height: none;
+  max-width: none;
+  height: 42em;
+  top: -8em;
+  left: 38%; }
