@@ -559,3 +559,69 @@ body {
   height: 42em;
   top: -8em;
   left: 38%; }
+.reveal section .circle {
+  position: absolute;
+  text-shadow: #fcc318 0 0 20px, #fcc318 0 0 20px, #fcc318 0 0 20px; }
+.reveal section .circle-drupal {
+  top: 5%;
+  width: 100%;
+  left: auto;
+  right: auto;
+  text-align: center; }
+.reveal section .circle-html {
+  bottom: 10%;
+  left: 10%;
+  width: 33%; }
+.reveal section .circle-css {
+  bottom: 10%;
+  right: 10%;
+  width: 33%; }
+.reveal section .circle-arrows {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: auto;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 12000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 12000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 12000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -webkit-animation-name: spin;
+  animation-name: spin;
+  -webkit-animation-duration: 12000ms;
+  animation-duration: 12000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear; }
+
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg); }
+
+  to {
+    -ms-transform: rotate(-360deg); } }
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
