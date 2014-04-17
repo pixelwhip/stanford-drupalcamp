@@ -1,0 +1,548 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@font-face {
+  font-family: 'League Gothic';
+  src: url("../../lib/font/league_gothic-webfont.eot");
+  src: url("../../lib/font/league_gothic-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/league_gothic-webfont.woff") format("woff"), url("../../lib/font/league_gothic-webfont.ttf") format("truetype"), url("../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto; }
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #e6e6e6;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f8f8f8), color-stop(100%, #e6e6e6));
+  background: -webkit-radial-gradient(center, circle cover, #f8f8f8 0%, #e6e6e6 100%);
+  background: radial-gradient(center, circle cover, #f8f8f8 0%, #e6e6e6 100%);
+  background-color: #f8f8f8; }
+
+.reveal {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: #222222; }
+
+::-moz-selection {
+  color: white;
+  background: #d33682;
+  text-shadow: none; }
+
+::selection {
+  color: white;
+  background: #d33682;
+  text-shadow: none; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #ca0914;
+  font-family: "League Gothic", Impact, sans-serif;
+  line-height: 0.9em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: none;
+  -webkit-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal h1 {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a:not(.image) {
+  color: #f98700;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:not(.image):hover {
+  color: #ffb660;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #ac5e00; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear; }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: #f98700; }
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: #f98700; }
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #f98700; }
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: #f98700; }
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #ffb660; }
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #ffb660; }
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #ffb660; }
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #ffb660; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #f98700;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+.reveal .slide-number {
+  color: #f98700; }
+
+.state--red {
+  /*********************************************
+   * GLOBAL STYLES
+   *********************************************/
+  /*********************************************
+   * HEADERS
+   *********************************************/
+  /*********************************************
+   * LINKS
+   *********************************************/
+  /*********************************************
+   * IMAGES
+   *********************************************/
+  /*********************************************
+   * NAVIGATION CONTROLS
+   *********************************************/
+  /*********************************************
+   * PROGRESS BAR
+   *********************************************/
+  /*********************************************
+   * SLIDE NUMBER
+   *********************************************/ }
+  .state--red body {
+    background: #ca0914;
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7424d), color-stop(100%, #ca0914));
+    background: -webkit-radial-gradient(center, circle cover, #f7424d 0%, #ca0914 100%);
+    background: radial-gradient(center, circle cover, #f7424d 0%, #ca0914 100%);
+    background-color: #ca0914; }
+  .state--red .reveal {
+    font-family: "Lato", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+    color: #222222; }
+  .state--red ::-moz-selection {
+    color: white;
+    background: #d33682;
+    text-shadow: none; }
+  .state--red ::selection {
+    color: white;
+    background: #d33682;
+    text-shadow: none; }
+  .state--red .reveal h1,
+  .state--red .reveal h2,
+  .state--red .reveal h3,
+  .state--red .reveal h4,
+  .state--red .reveal h5,
+  .state--red .reveal h6 {
+    margin: 0 0 20px 0;
+    color: #f8f8f8;
+    font-family: "League Gothic", Impact, sans-serif;
+    line-height: 0.9em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-shadow: none;
+    -webkit-transition: color .15s ease;
+    transition: color .15s ease; }
+  .state--red .reveal h1 {
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+  .state--red .reveal a:not(.image) {
+    color: #fcc318;
+    text-decoration: none;
+    -webkit-transition: color .15s ease;
+    transition: color .15s ease; }
+  .state--red .reveal a:not(.image):hover {
+    color: #fddd7d;
+    text-shadow: none;
+    border: none; }
+  .state--red .reveal .roll span:after {
+    color: #fff;
+    background: #c59403; }
+  .state--red .reveal section img {
+    margin: 15px 0px;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear; }
+  .state--red .reveal .controls div.navigate-left,
+  .state--red .reveal .controls div.navigate-left.enabled {
+    border-right-color: #fcc318; }
+  .state--red .reveal .controls div.navigate-right,
+  .state--red .reveal .controls div.navigate-right.enabled {
+    border-left-color: #fcc318; }
+  .state--red .reveal .controls div.navigate-up,
+  .state--red .reveal .controls div.navigate-up.enabled {
+    border-bottom-color: #fcc318; }
+  .state--red .reveal .controls div.navigate-down,
+  .state--red .reveal .controls div.navigate-down.enabled {
+    border-top-color: #fcc318; }
+  .state--red .reveal .controls div.navigate-left.enabled:hover {
+    border-right-color: #fddd7d; }
+  .state--red .reveal .controls div.navigate-right.enabled:hover {
+    border-left-color: #fddd7d; }
+  .state--red .reveal .controls div.navigate-up.enabled:hover {
+    border-bottom-color: #fddd7d; }
+  .state--red .reveal .controls div.navigate-down.enabled:hover {
+    border-top-color: #fddd7d; }
+  .state--red .reveal .progress {
+    background: rgba(0, 0, 0, 0.2); }
+  .state--red .reveal .progress span {
+    background: #fcc318;
+    -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+  .state--red .reveal .slide-number {
+    color: #fcc318; }
+
+.state--yellow {
+  /*********************************************
+   * GLOBAL STYLES
+   *********************************************/
+  /*********************************************
+   * HEADERS
+   *********************************************/
+  /*********************************************
+   * LINKS
+   *********************************************/
+  /*********************************************
+   * IMAGES
+   *********************************************/
+  /*********************************************
+   * NAVIGATION CONTROLS
+   *********************************************/
+  /*********************************************
+   * PROGRESS BAR
+   *********************************************/
+  /*********************************************
+   * SLIDE NUMBER
+   *********************************************/ }
+  .state--yellow body {
+    background: orange;
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #fcc318), color-stop(100%, orange));
+    background: -webkit-radial-gradient(center, circle cover, #fcc318 0%, orange 100%);
+    background: radial-gradient(center, circle cover, #fcc318 0%, orange 100%);
+    background-color: #fcc318; }
+  .state--yellow .reveal {
+    font-family: "Lato", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+    color: #222222; }
+  .state--yellow ::-moz-selection {
+    color: white;
+    background: #d33682;
+    text-shadow: none; }
+  .state--yellow ::selection {
+    color: white;
+    background: #d33682;
+    text-shadow: none; }
+  .state--yellow .reveal h1,
+  .state--yellow .reveal h2,
+  .state--yellow .reveal h3,
+  .state--yellow .reveal h4,
+  .state--yellow .reveal h5,
+  .state--yellow .reveal h6 {
+    margin: 0 0 20px 0;
+    color: #f8f8f8;
+    font-family: "League Gothic", Impact, sans-serif;
+    line-height: 0.9em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-shadow: none;
+    -webkit-transition: color .15s ease;
+    transition: color .15s ease; }
+  .state--yellow .reveal h1 {
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+  .state--yellow .reveal a:not(.image) {
+    color: #ca0914;
+    text-decoration: none;
+    -webkit-transition: color .15s ease;
+    transition: color .15s ease; }
+  .state--yellow .reveal a:not(.image):hover {
+    color: #f7424d;
+    text-shadow: none;
+    border: none; }
+  .state--yellow .reveal .roll span:after {
+    color: #fff;
+    background: #81060d; }
+  .state--yellow .reveal section img {
+    margin: 15px 0px;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear; }
+  .state--yellow .reveal .controls div.navigate-left,
+  .state--yellow .reveal .controls div.navigate-left.enabled {
+    border-right-color: #ca0914; }
+  .state--yellow .reveal .controls div.navigate-right,
+  .state--yellow .reveal .controls div.navigate-right.enabled {
+    border-left-color: #ca0914; }
+  .state--yellow .reveal .controls div.navigate-up,
+  .state--yellow .reveal .controls div.navigate-up.enabled {
+    border-bottom-color: #ca0914; }
+  .state--yellow .reveal .controls div.navigate-down,
+  .state--yellow .reveal .controls div.navigate-down.enabled {
+    border-top-color: #ca0914; }
+  .state--yellow .reveal .controls div.navigate-left.enabled:hover {
+    border-right-color: #f7424d; }
+  .state--yellow .reveal .controls div.navigate-right.enabled:hover {
+    border-left-color: #f7424d; }
+  .state--yellow .reveal .controls div.navigate-up.enabled:hover {
+    border-bottom-color: #f7424d; }
+  .state--yellow .reveal .controls div.navigate-down.enabled:hover {
+    border-top-color: #f7424d; }
+  .state--yellow .reveal .progress {
+    background: rgba(0, 0, 0, 0.2); }
+  .state--yellow .reveal .progress span {
+    background: #ca0914;
+    -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+  .state--yellow .reveal .slide-number {
+    color: #ca0914; }
+
+.state--dark {
+  /*********************************************
+   * GLOBAL STYLES
+   *********************************************/
+  /*********************************************
+   * HEADERS
+   *********************************************/
+  /*********************************************
+   * LINKS
+   *********************************************/
+  /*********************************************
+   * IMAGES
+   *********************************************/
+  /*********************************************
+   * NAVIGATION CONTROLS
+   *********************************************/
+  /*********************************************
+   * PROGRESS BAR
+   *********************************************/
+  /*********************************************
+   * SLIDE NUMBER
+   *********************************************/ }
+  .state--dark body {
+    background: #222222;
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555555), color-stop(100%, #222222));
+    background: -webkit-radial-gradient(center, circle cover, #555555 0%, #222222 100%);
+    background: radial-gradient(center, circle cover, #555555 0%, #222222 100%);
+    background-color: #222222; }
+  .state--dark .reveal {
+    font-family: "Lato", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+    color: #f8f8f8; }
+  .state--dark ::-moz-selection {
+    color: white;
+    background: #d33682;
+    text-shadow: none; }
+  .state--dark ::selection {
+    color: white;
+    background: #d33682;
+    text-shadow: none; }
+  .state--dark .reveal h1,
+  .state--dark .reveal h2,
+  .state--dark .reveal h3,
+  .state--dark .reveal h4,
+  .state--dark .reveal h5,
+  .state--dark .reveal h6 {
+    margin: 0 0 20px 0;
+    color: #fcc318;
+    font-family: "League Gothic", Impact, sans-serif;
+    line-height: 0.9em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-shadow: none;
+    -webkit-transition: color .15s ease;
+    transition: color .15s ease; }
+  .state--dark .reveal h1 {
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+  .state--dark .reveal a:not(.image) {
+    color: #ca0914;
+    text-decoration: none;
+    -webkit-transition: color .15s ease;
+    transition: color .15s ease; }
+  .state--dark .reveal a:not(.image):hover {
+    color: #f7424d;
+    text-shadow: none;
+    border: none; }
+  .state--dark .reveal .roll span:after {
+    color: #fff;
+    background: #81060d; }
+  .state--dark .reveal section img {
+    margin: 15px 0px;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear; }
+  .state--dark .reveal .controls div.navigate-left,
+  .state--dark .reveal .controls div.navigate-left.enabled {
+    border-right-color: #ca0914; }
+  .state--dark .reveal .controls div.navigate-right,
+  .state--dark .reveal .controls div.navigate-right.enabled {
+    border-left-color: #ca0914; }
+  .state--dark .reveal .controls div.navigate-up,
+  .state--dark .reveal .controls div.navigate-up.enabled {
+    border-bottom-color: #ca0914; }
+  .state--dark .reveal .controls div.navigate-down,
+  .state--dark .reveal .controls div.navigate-down.enabled {
+    border-top-color: #ca0914; }
+  .state--dark .reveal .controls div.navigate-left.enabled:hover {
+    border-right-color: #f7424d; }
+  .state--dark .reveal .controls div.navigate-right.enabled:hover {
+    border-left-color: #f7424d; }
+  .state--dark .reveal .controls div.navigate-up.enabled:hover {
+    border-bottom-color: #f7424d; }
+  .state--dark .reveal .controls div.navigate-down.enabled:hover {
+    border-top-color: #f7424d; }
+  .state--dark .reveal .progress {
+    background: rgba(0, 0, 0, 0.2); }
+  .state--dark .reveal .progress span {
+    background: #ca0914;
+    -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+  .state--dark .reveal .slide-number {
+    color: #ca0914; }
+
+.reveal .slide-canvas {
+  height: 95%; }
+
+.reveal section .module-list {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  list-style: none; }
+  .reveal section .module-list > li {
+    font-size: .5em;
+    line-height: 1.4em;
+    list-style: none; }
+    .reveal section .module-list > li.fragment.shrink.visible {
+      opacity: .2; }
+  .reveal section .module-list a {
+    color: #222222; }
+.reveal section .screenshot {
+  border: 3px solid white;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+.reveal section .stanford-logo {
+  width: 240px;
+  margin-bottom: .5em;
+  color: #8c1515; }
+  .reveal section .stanford-logo + h2 {
+    margin-top: .5em; }
+.reveal section #layout-node-page {
+  width: 300px;
+  height: 400px;
+  margin: auto;
+  opacity: .4; }
+  .reveal section #layout-node-page.visible {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .reveal section #layout-node-page.current-fragment {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none; }
+.reveal section .layout-list {
+  position: absolute;
+  top: 4em;
+  left: 58%; }
+  .reveal section .layout-list .fragment {
+    list-style: none;
+    margin-bottom: 1em; }
+    .reveal section .layout-list .fragment.visible {
+      opacity: .3 !important; }
+    .reveal section .layout-list .fragment.current-fragment {
+      opacity: 1 !important; }
+.reveal section .layout-title {
+  text-align: left;
+  margin-left: 50%; }
+.reveal section .layout-img {
+  position: absolute;
+  width: 400px;
+  opacity: .4;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto !important;
+  max-height: none; }
+.reveal section .view-mode--full {
+  position: absolute;
+  top: 3em;
+  right: 0;
+  width: 60%; }
+.reveal section .view-mode--teaser {
+  position: absolute;
+  left: 0;
+  width: 60%;
+  bottom: 10%; }
+.reveal section .view-mode--listing {
+  position: absolute;
+  width: 25%;
+  top: 20%;
+  left: 5%; }
+.reveal section .acronym > strong {
+  font-weight: inherit;
+  color: #68050a; }
+.reveal section .background-text {
+  position: fixed;
+  display: block;
+  font-size: 20em !important;
+  line-height: .66em;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  vertical-align: bottom;
+  opacity: .1; }

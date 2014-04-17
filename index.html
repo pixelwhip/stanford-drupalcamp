@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section id="title-slide">
+					<h1>Custom Themes</h1>
+					<h3>Without the Custom Themes</h3>
+					<p>Pushing the visual style of Stanford Site</p>
+					<p>
+					</p>
+
+					<aside class="notes">
+						Current State: Stanford sites offers a flexible platform for getting your content online.  It's Free!!
+
+						Consequences:  No custom code :( You will have some limitations.  Your site will look like everyone elses.
+
+						Solution:  Use the tools available. Get creative.
+
+						Call to Action: Take advantage of Stanford Sites.  Don't let the idea of no custom code hold you back.  Build something beautiful.
+					</aside>
+				</section>
+
+				<section id="about">
+					<h1>Aten Logo</h1>
+					<h3>John Ferris</h3>
+					<p>
+						<small>Created by <a href="http://pixel-whip.com">John Ferris</a> / <a href="http://twitter.com/picxel_whip">@pixel_whip</a></small>
+					</p>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h1>Themes</h1>
+					<h2 class="fragment">HTML + CSS + JS</h2>
+
+					<aside class="notes">
+						The purpose of a Drupal theme is to improve upon the site's user experience.
+
+						Your SITE enables a user accomplish a certain goal--register for an event, communicate with their peers, or in most cases to access your content.
+
+						The THEME, improves upon that experience. By making the navigation clearer, the text more readible and making sure the experience is consistent with related on and offline properties.
+
+						From a technical point of view, the theme does this by modifying the default HTML, CSS and JS.
+
+						And that's what we're talking about today.
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/stanford-logo.png" alt="Stanford Logo" class="stanford-logo">
+					<h2>Stanford Sites</h2>
+					<aside class="notes">
+						Today we're going to focus on the technical side of improving the user experience.  Ways you can manipulate the HTML + CSS + JS on the Stanford Sites platform.
+					</aside>
+				</section>
+
+				<section data-state="state--dark">
+					<img src="img/free.svg">
+
+					<aside class="notes">
+						Stanford sites offers current faculty, staff and students a free platform to get their content online. It's self service and hosted and maintained Drupal infustructure.
+					</aside>
+				</section>
+
+				<section data-state="state--red">
+					<h1><sup class="background-text">*</sup>No Outside Code</h1>
+					<h3>Permitted beyond this point</h3>
+
+					<aside class="notes">
+						As a front-end developer working with Drupal, I spend a good deal of time writing custom code to get the HTML, CSS and JS I want.  So when we were first approached with a project that where a custom user experience was a high priority and needed to launch on was going to be built on the Stanford Sites platform, I was a little skeptical about how far we culd push it.
+
+						But as it turned out, there is a lot of power and flexibility built into Stanford Sites and what limitations we did run into we're related more to functionality that would require a custom module than custom code in the theme.
+
+						In some ways this was actually freeing.  It was a little relief from analysis paralysis. It forces you to be creative with the tools you have available and think inside the box.
+
+						Let's look at those tools.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Included Modules</h2>
+					<ul class="module-list">
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/admin_menu">admin_menu</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/admin_views">admin_views</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/advanced_help">advanced_help</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/auto_nodetitle">auto_nodetitle</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/backup_migrate">backup_migrate</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/backup_migrate_files">backup_migrate_files</a></li>
+						<li><a href="http://drupal.org/project/bean" rel="nofollow">bean</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/better_exposed_filters" rel="nofollow">better exposed filters</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/better_formats" rel="nofollow">better formats</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/biblio">biblio</a></li>
+						<li>
+<a href="http://drupal.org/project/block_class">block_class</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/block_titlelink">block_titlelink </a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/bundle_copy">bundle_copy</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/calendar">calendar</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/computed_field" rel="nofollow">computed field</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/content_access">content_access</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/context">context</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/context_accordion" rel="nofollow">context accordion</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/context_list">context_list</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/context_list_active">context_list_active</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/context_respect">context_respect</a></li>
+						<li>
+<a href="http://drupal.org/project/css_injector">css_injector</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/ctools">ctools</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/custom_breadcrumbs">custom_breadcrumbs</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/date">date</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/date_ical">date_ical</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/delta" rel="nofollow">delta</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/diff" rel="nofollow">diff</a></li>
+						<li>
+<a href="http://drupal.org/project/ds">ds</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/email">email</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/entity">entity</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/entityreference">entityreference</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/features">features</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/feeds">feeds</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/feeds_tamper">feeds_tamper</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/feeds_xpathparser">feeds_xpathparser</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/field_collection">field_collection</a></li>
+						<li>
+<a href="http://drupal.org/project/field_group">field_group</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/filefield_paths">filefield_paths</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/geofield" rel="nofollow">geofield</a> (and <a href="https://drupal.org/project/geophp" rel="nofollow">geophp</a>)</li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/globalredirect">globalredirect</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/google_analytics">google_analytics</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/insert">insert</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/job_scheduler">job_scheduler</a></li>
+						<li>
+<a href="https://drupal.org/project/js_injector">js_injector</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/jw_player">jw_player</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/libraries">libraries</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/link">link</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/menu_block" rel="nofollow">menu block</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/menu_position" rel="nofollow">menu position</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/metatag">metatag</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/module_filter" rel="nofollow">module filter</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/mollom">mollom</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/nodeformcols">nodeformcols</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/node_clone">node_clone</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/openlayers" rel="nofollow">openlayers</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/path_redirect_import">path_redirect_import</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/pathauto">pathauto</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/pathologic">pathologic</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/proj4js">proj4js</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/redirect">redirect</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/relation">relation</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/rules">rules</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/services">services</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/site_verify" rel="nofollow">site verification</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/smart_trim">smart_trim</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupalfeatures.stanford.edu/project/stanford-courses">stanford_courses</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupalfeatures.stanford.edu/project/stanford-events-importer">stanford_events_importer</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupalfeatures.stanford.edu/project/stanford-sites-helper">stanford_sites_helper</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupalfeatures/project/stanford-web-video">stanford_video</a></li>
+					  	<li class="fragment shrink" data-fragment-index="2">
+<a href="https://github.com/su-sws/stanford_video" rel="nofollow">stanford web video</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://github.com/su-sws/stanford_wysiwyg" rel="nofollow">stanford_wysiwyg</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/strongarm">strongarm</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/taxonomy_manager">taxonomy_manager</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/token">token</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/transliteration" rel="nofollow">transliteration</a></li>
+						<li>
+<a href="http://drupal.org/project/views">views</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/views_bulk_operations">views_bulk_operations</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/views_data_export">views_data_export</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/views_field_view">views_field_view</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/views_slideshow">views_slideshow</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://itservices.stanford.edu/service/web/stanfordsites/webauthfeatures">webauth v.3</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/webform" rel="nofollow">webform</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/workbench" rel="nofollow">workbench</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/workbench_access" rel="nofollow">workbench access</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/workbench_moderation" rel="nofollow">workbench moderation</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/wysiwyg">wysiwyg</a> [with CKEditor JS libraries]</li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="http://drupal.org/project/wysiwyg_filter" rel="nofollow">wysiwyg filter</a></li>
+						<li class="fragment shrink" data-fragment-index="2">
+<a href="https://drupal.org/project/xmlsitemap">xmlsitemap</a></li>
+					</ul>
+					<aside class="notes">
+						You actually have a lot of useful tools at your disposal.
+
+					</aside>
+				</section>
+
+				<section data-state="state--yellow">
+					<h1>HTML<br/>&lt;/&gt;</h1>
+
+					<aside class="notes">
+						Sense good markup is the foundation of any web project, let's start there.
+					</aside>
+				</section>
+
+				<section data-state="state--yellow" data-slide-on-change="layoutLoad" >
+					<h2>The Drupal Page</h2>
+					<div id="layout-node-page" class="fragment fade-in" src=""></div>
+					<ul class="layout-list">
+						<li class="fragment"><h3>Layout</h3></li>
+						<li class="fragment" data-fragment-on-show="layoutShowBlocks" data-fragment-on-hide="layoutHideBlocks"><h3>Blocks</h3></li>
+						<li class="fragment" data-fragment-on-show="layoutShowViews" data-fragment-on-hide="layoutHideViews"><h3>Views</h3></li>
+						<li class="fragment" data-fragment-on-show="layoutShowNodes" data-fragment-on-hide="layoutHideNodes"><h3>Nodes</h3></li>
+					</ul>
+					<aside class="notes">
+						You actually have a lot of useful tools at your disposal.
+						<ul>
+							<li>Nodes</li>
+							<li>Views</li>
+							<li>Blocks</li>
+							<li>Layout</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-state="state--yellow" >
+					<h1 class="layout-title">Nodes</h1>
+					<img class="layout-img" src="img/layout-node.svg">
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+
+
+				<section data-state="state--dark" >
+					<h1>Display Suite</h1>
+
+					<aside class="notes">
+						Display suite is all about giving you control over the markup of entities.
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot" class="slide-canvas">
+					<h2>View Modes</h2>
+					<img class="screenshot view-mode--full" src="img/ss-node-mode-full.png">
+					<img class="screenshot view-mode--teaser" src="img/ss-node-mode-teaser.png">
+					<img class="screenshot view-mode--listing" src="img/ss-node-mode-listing.png">
+
+					<aside class="notes">
+						View modes allow you to display content in different ways.  We typically think of Full and Teaser.  Display suite allows you to expand on those with custom view modes.
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot">
+					<img class="screenshot" src="img/ss-ds-view-modes.png">
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot">
+					<h2>DS Layouts</h2>
+					<img class="screenshot" src="img/ss-ds-layout.png">
+					<aside class="notes">
+						Display Suite has built in layouts.  These aren't responsive.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Psuedo Layouts <small>with Field Groups</small></h2>
+
+					<img class="screenshot" src="img/ss-ds-field-groups.png">
+					<aside class="notes">
+						In a custom code world, you can create a custom DS layout.  In Stanford Sites land, you can fake them with field groups.
+					</aside>
+				</section>
+
+				<section>
+
+					<img class="screenshot" src="img/ss-ds-field-groups-example.png">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-state="state--yellow" >
+					<h1 class="layout-title">Views</h1>
+					<img class="layout-img" src="img/layout-views.svg">
+
+					<aside class="notes">
+						Views allow you to list content.
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-views-example.png">
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-views.png">
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-views-style-settings.png">
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-views-field-settings.png">
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+	<h2>Yay...clean list markup!</h2>
+<pre><code><div class="list-group">
+  <ul class="list--ruled--inner list--ruled--condensed">
+    <li class="list-item"><!-- Node Markup --></li>
+    <li class="list-item"><!-- Node Markup --></li>
+    <li class="list-item"><!-- Node Markup --></li>
+  </ul>
+</div>
+</code></pre>
+
+					<aside class="notes">
+						List class, Row class and Wrapper class
+					</aside>
+				</section>
+
+				<section data-state="state--yellow" >
+					<h1 class="layout-title">Blocks</h1>
+					<img class="layout-img" src="img/layout-blocks.svg">
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h1>Block Class</h1>
+					<aside class="notes">
+						Allows you to add a class to any block or bean.  Sloppy CSS b-gone.  By sharing classes makes your CSS more maintainable.
+					</aside>
+				</section>
+
+				<section>
+					<h1>B.E.A.N.</h1>
+					<h3 class="acronym"><strong>B</strong>locks <strong>E</strong>ntities <strong>A</strong>ren't <strong>N</strong>odes</h3>
+					<p><small><a href="https://drupal.org/project/bean">Link</a></small></p>
+					<aside class="notes">
+						Block entities.  Which means they are fieldable, and you can create custom view modes for them.  This module does it give you direct control per say of blocks, but it does allow you to leverage the same Display Suite interface for blocks as you use for nodes.
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-bean-manage-fields.png">
+					<aside class="notes">
+						Beans are entities that behave like nodes in terms of being fieldable and having different content types. But also behave like blocks in terms of their placement.
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-bean-manage-display.png">
+					<aside class="notes">
+						What makes these handy in terms of theming is they can also have view modes.  Those view modes can have their markup tweaked with display suite--just like nodes.
+					</aside>
+				</section>
+
+				<section data-state="state--screenshot" >
+					<img class="screenshot" src="img/ss-viewmodes.gif">
+					<aside class="notes">
+						What makes these handy in terms of theming is they can also have view modes.  Those view modes can have their markup tweaked with display suite--just like nodes.
+					</aside>
+				</section>
+
+				<section data-state="state--yellow" >
+					<h1 class="layout-title">Layout</h1>
+					<img class="layout-img" src="img/layout.svg">
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h2>Open Framework</h2>
+
+					<aside class="notes">
+						This is what theming is all about.
+					</aside>
+				</section>
+
+				<section>
+					<img class="screenshot screenshot--regions" src="img/ss-regions.png" alt="Regions Screenshot">
+					<h2>Regions</h2>
+					<aside class="notes">
+						Views allow you to list content.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Breakpoints</h2>
+					<ul>
+						<li>max-width: 480px</li>
+						<li>max-width: 767px</li>
+						<li>min-width: 786px - max-width:979</li>
+						<li>Defualt</li>
+						<li>min-width: 1200px</li>
+					</ul>
+					<aside class="notes">
+						Design to these breakpoints
+					</aside>
+				</section>
+
+				<section>
+					<h2>Bootstrap Grids</h2>
+					<code>.span#</code>
+					<aside class="notes">
+						Used for laying out blocks
+					</aside>
+				</section>
+
+				<section data-state="state--yellow">
+					<h1>CSS<br/>{ }</h1>
+
+					<aside class="notes">
+						Sense good markup is the foundation of any web project, let's start there.
+					</aside>
+				</section>
+
+				<section>
+					<h1>CSS Injector</h1>
+
+					<aside class="notes">
+						This is what theming is all about.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Importing Fonts</h1>
+					<pre><code data-trim>@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic);
+</code></pre>
+
+					<aside class="notes">
+						Allows you to write in the environment you want.  Separates components.  You can use Sass. Which aids in responsive and image handling.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Chrome Dev Tools</h1>
+
+					<aside class="notes">
+						Allows you to work on the live site. Quick. Editor is pretty good.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Style Guide</h1>
+
+					<aside class="notes">
+						Allows you to write in the environment you want.  Separates components.  You can use Sass. Which aids in responsive and image handling.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Sass + Compass</h1>
+
+					<aside class="notes">
+						Allows you to write in the environment you want.  Separates components.  You can use Sass. Which aids in responsive and image handling.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Inlining Images</h1>
+					<code>menu.scss</code>
+					<pre><code>
+.menu {
+  background: inline-image('open.png') no-repeat;
+}
+</code></pre>
+<!-- Compiles to... -->
+					<code>menu.css</code>
+<pre><code>
+.menu {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+lpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAxNC0wMi0xMVQxMzozOTozNS0wNzowMCIgeG1wOk1vZGlmeURhdGU9IjIwMTQtMDItMjVUMjM6NDg6NDUtMDc6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMTQtMDItMjVUMjM6NDg6NDUtMDc6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjgyNThERENBOTY5QjExRTM5MDA2RDRGODkwMkE0RTNCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjgyNThERENCOTY5QjExRTM5MDA2RDRGODkwMkE0RTNCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODI1OEREQzg5NjlCMTFFMzkwMDZENEY4OTAyQTRFM0IiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODI1OEREQzk5NjlCMTFFMzkwMDZENEY4OTAyQTRFM0IiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6/KDptAAAAe0lEQVR42mL8//8/A7UBEwMNwPAzVBCIZ0JpwgAUUQSwIBCf+Q8BZ6B8vHpIMXAmsQYTa2AaVCyNGINJMZCBWIOxGagExO+g2BjJkplIhhgjqVEixlCQxt1oBmKLKGOoOsHRiCIrotAxxRHFgMdgrBHFOFqeDg1DAQIMALrF5tC9DUaUAAAAAElFTkSuQmCC') no-repeat;
+}
+
+</code></pre>
+					<aside class="notes">
+						Allows you to write in the environment you want.  Separates components.  You can use Sass. Which aids in responsive and image handling.
+					</aside>
+				</section>
+
+
+
+				<section data-state="state--yellow">
+					<h1>js<br/>( )</h1>
+
+					<aside class="notes">
+						Sense good markup is the foundation of any web project, let's start there.
+					</aside>
+				</section>
+
+				<section>
+					<h1>JS Injector</h1>
+
+					<aside class="notes">
+						Didn't use it.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Drupal -> HTML -> CSS -> Drupal</h1>
+
+					<aside class="notes">
+						Didn't use it.
+					</aside>
+				</section>
+
+				<section data-state="state--dark">
+					<img src="img/build-something.png" alt="build something beautiful">
+
+					<aside class="notes">
+						Build something beautiful.
+					</aside>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="lib/js/snap.svg-min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: 'aten', // available themes are in /css/theme
+				transition: 'fade' || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+		<script src="js/deck.js"></script>
+
+	</body>
+</html>

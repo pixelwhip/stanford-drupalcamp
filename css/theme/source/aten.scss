@@ -1,0 +1,322 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'League Gothic';
+	src: url('../../lib/font/league_gothic-webfont.eot');
+	src: url('../../lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/league_gothic-webfont.woff') format('woff'),
+		 url('../../lib/font/league_gothic-webfont.ttf') format('truetype'),
+		 url('../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+// Solarized colors
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$cyan:      #2aa198;
+$green:     #859900;
+
+// Aten Colors
+$black:         #222222;
+$gray:          #999999;
+$white:         #f8f8f8;
+$yellow:        #fcc318;
+$red:           #ca0914;
+$blue:          #006699;
+$blue--dark:    #004466;
+$blue--white:   #ccebf5;
+$orange:        #f98700;
+$orange--dark:  #f64b00;
+
+// Stanford colors
+$s-red:             #8C1515;
+$s-red--dark:       #820000;
+$s-black:           #2e2d29;
+$s-gray:            #585754;
+$s-gray-warm:       #3f3c30;
+$s-gray-warm-90:    #565347;
+$s-gray-warm-60:    #8a887d;
+$s-sand:            #ddcf99;
+$s-sand-50:         #eee6cb;
+$s-sand-35:         #f3efd8;
+$s-sand-25:         #f6f3e5;
+$s-sand-20:         #f8f6ea;
+$s-beige:           #9d9573;
+$s-beige-85:        #aca68d;
+$s-beige-60:        #c4bfa9;
+$s-beige-40:        #d5d0c0;
+$s-beige-30:        #e3dfd5;
+$s-beige-20:        #e9e6df;
+$s-beige-10:        #f2f1eb;
+$s-beige-05:        #fbfbf9;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $black;
+$headingColor: $red;
+$headingTextShadow: none;
+$backgroundColor: $white;
+$linkColor: $orange;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $magenta;
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( rgba(lighten($gray, 30%) ,1), rgba($backgroundColor, 1) );
+}
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+//
+// States
+//
+
+// Red
+  $mainColor: $black;
+  $headingColor: $white;
+  $headingTextShadow: none;
+  $backgroundColor: $red;
+  $linkColor: $yellow;
+  $linkColorHover: lighten( $linkColor, 20% );
+  $selectionBackgroundColor: $magenta;
+
+.state--red {
+  // Override theme settings (see ../template/settings.scss)
+
+
+  // Background generator
+  @mixin bodyBackground() {
+    @include radial-gradient( rgba($backgroundColor,1), rgba(lighten($backgroundColor, 20%),1) );
+  }
+
+  @import "../template/theme";
+}
+
+// Yellow
+  $mainColor: $black;
+  $headingColor: $white;
+  $headingTextShadow: none;
+  $backgroundColor: $yellow;
+  $linkColor: $red;
+  $linkColorHover: lighten( $linkColor, 20% );
+  $selectionBackgroundColor: $magenta;
+
+.state--yellow {
+  // Override theme settings (see ../template/settings.scss)
+
+
+  // Background generator
+  @mixin bodyBackground() {
+    @include radial-gradient( rgba(orange,1), rgba(lighten($backgroundColor, 0),1) );
+  }
+
+  @import "../template/theme";
+}
+
+// Dark
+  $mainColor: $white;
+  $headingColor: $yellow;
+  $headingTextShadow: none;
+  $backgroundColor: $black;
+  $linkColor: $red;
+  $linkColorHover: lighten( $linkColor, 20% );
+  $selectionBackgroundColor: $magenta;
+
+.state--dark {
+  // Override theme settings (see ../template/settings.scss)
+
+  // Background generator
+  @mixin bodyBackground() {
+    @include radial-gradient( rgba($backgroundColor,1), rgba(lighten($backgroundColor, 20%),1) );
+  }
+
+  @import "../template/theme";
+}
+
+// wrap everything in .reveal section to overcome specificity
+.reveal .slide-canvas {
+  height: 95%;
+}
+
+.reveal section {
+
+.module-list {
+	column-count: 4;
+	column-gap: 40px;
+	list-style: none;
+
+	> li {
+		font-size: .5em;
+		line-height: 1.4em;
+		list-style: none;
+
+		&.fragment.shrink.visible {
+			opacity: .2;
+		}
+	}
+
+	a {
+		color: $black;
+	}
+}
+
+//
+// Images
+//
+.screenshot {
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+//
+// Stanford Sites
+//
+
+.stanford-logo {
+  width: 240px;
+  margin-bottom: .5em;
+  color: $s-red;
+
+  & + h2 {
+    margin-top: .5em;
+  }
+}
+
+//
+// Anatomy of a Drupal page
+//
+
+#layout-node-page {
+	width: 300px;
+	height: 400px;
+	margin: auto;
+  opacity: .4;
+
+	&.visible {
+		transform: translateX(-50%);
+	}
+
+	&.current-fragment {
+		transform: none;
+	}
+}
+
+.layout-list {
+	position: absolute;
+	top: 4em;
+	left: 58%;
+
+	.fragment {
+		list-style: none;
+		margin-bottom: 1em;
+
+		&.visible {
+			opacity: .3 !important;
+		}
+
+		&.current-fragment {
+			opacity: 1 !important;
+		}
+	}
+}
+
+.layout-title {
+  text-align: left;
+  margin-left: 50%;
+}
+
+.layout-img {
+  position: absolute;
+  width: 400px;
+  opacity: .4;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto !important;
+  max-height: none;
+}
+
+//
+// View Modes
+//
+
+.view-mode--full {
+  position: absolute;
+  top: 3em;
+  right: 0;
+  width: 60%;
+}
+
+.view-mode--teaser {
+  position: absolute;
+  left: 0;
+  width: 60%;
+  bottom: 10%;
+}
+
+.view-mode--listing {
+  position: absolute;
+  width: 25%;
+  top: 20%;
+  left: 5%;
+}
+
+//
+// Acronyms
+//
+
+.acronym > strong {
+  font-weight: inherit;
+  color: darken($red, 20%);
+}
+
+.background-text {
+  position: fixed;
+  display: block;
+  font-size: 20em !important;
+  line-height: .66em;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  vertical-align: bottom;
+  opacity: .1;
+}
+
+}
