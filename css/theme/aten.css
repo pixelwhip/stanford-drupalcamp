@@ -604,6 +604,63 @@ body {
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear; }
+.reveal section .theme-components {
+  vertical-align: middle; }
+.reveal section .theme-component {
+  display: inline-block; }
+.reveal section .theme-component-symbol {
+  font-size: .825em; }
+  .reveal section .theme-component-symbol:before {
+    content: "";
+    display: block; }
+.reveal section .theme-component-separator {
+  display: inline-block;
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  vertical-align: 20px;
+  font-weight: 700;
+  font-size: 1.4em; }
+.reveal section .block-class-list {
+  margin: 0;
+  padding: 0;
+  vertical-align: top; }
+.reveal section .block-class-item {
+  display: inline-block;
+  width: 24%;
+  list-style: none; }
+  .reveal section .block-class-item > img {
+    max-height: 200px; }
+.reveal section .breakpoint-list {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  position: absolute;
+  width: 100%;
+  top: 4em;
+  left: 0; }
+.reveal section .breakpoint-item {
+  display: inline-block;
+  width: 18%;
+  list-style: none;
+  vertical-align: top;
+  margin-right: -.3em; }
+  .reveal section .breakpoint-item > code {
+    font-size: .5em; }
+.reveal section .block-class-code {
+  display: block;
+  font-size: .5em; }
+.reveal section .screenshot-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto; }
+
+#about .ss-twitter {
+  margin-left: 50px;
+  margin-right: 12px;
+  font-size: 24px; }
 
 @-ms-keyframes spin {
   from {

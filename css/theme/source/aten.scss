@@ -399,11 +399,95 @@ $selectionBackgroundColor: $magenta;
     animation-duration: 12000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
 
+.theme-components {
+  vertical-align: middle;
+}
 
+.theme-component {
+  display: inline-block;
+}
+
+.theme-component-symbol {
+  font-size: .825em;
+  &:before {
+    content: "";
+    display: block
+  }
+}
+
+.theme-component-separator {
+  display: inline-block;
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  vertical-align: 20px;
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+.block-class-list {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+.block-class-item {
+  display: inline-block;
+  width: 24%;
+  list-style: none;
+
+  > img {
+    max-height: 200px;
+  }
+}
+
+.breakpoint-list {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  position: absolute;
+  width: 100%;
+  top: 4em;
+  left: 0;
+}
+
+.breakpoint-item {
+  display: inline-block;
+  width: 18%;
+  list-style: none;
+  vertical-align: top;
+  margin-right: -.3em;
+
+  > code {
+    font-size: .5em;
+  }
+}
+
+.block-class-code {
+  display: block;
+  font-size: .5em;
+}
+
+.screenshot-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 } // End .reveal .section wrapper
+
+#about {
+  .ss-twitter {
+    margin-left: 50px;
+    margin-right: 12px;
+    font-size: 24px;
+  }
+}
+
 @-ms-keyframes spin {
     from { -ms-transform: rotate(0deg); }
     to { -ms-transform: rotate(-360deg); }
